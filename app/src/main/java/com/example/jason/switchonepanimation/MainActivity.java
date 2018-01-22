@@ -17,9 +17,9 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.iv_switch_onep) ImageView ivSwitchOnep;
-    @BindView(R.id.iv_switch_twop) ImageView ivSwitchTwop;
-    @BindView(R.id.ll_switch_one_or_two_p) LinearLayout llSwitchOneOrTwoP;
+    @BindView(R.id.iv_switch_bar_onep) ImageView ivSwitchOnep;
+    @BindView(R.id.iv_switch_bar_twop) ImageView ivSwitchTwop;
+    @BindView(R.id.ll_switch_bar) LinearLayout llSwitchOneOrTwoP;
     @BindView(R.id.fl_main_activity) FrameLayout flMainActivity;
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
         initOneP();
     }
 
-    @OnClick(R.id.iv_switch_onep)
+    @OnClick(R.id.iv_switch_bar_onep)
     public void onOnePClick(View view) {
         initOneP();
     }
 
-    @OnClick(R.id.iv_switch_twop)
+    @OnClick(R.id.iv_switch_bar_twop)
     public void onTwoPClick(View view) {
         initTwoP();
     }
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
     public void initOneP() {
         ivSwitchOnep.setSelected(true);
         ivSwitchTwop.setSelected(false);
-        setImageViewLayoutParams(ivSwitchOnep, 48, 30);
-        setImageViewLayoutParams(ivSwitchTwop, 34, 22);
+        setImageViewLayoutParams(ivSwitchOnep, 54, 36);
+        setImageViewLayoutParams(ivSwitchTwop, 40, 28);
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fl_main_activity, fragment1);
         fragmentTransaction.commit();
@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
     public void initTwoP() {
         ivSwitchOnep.setSelected(false);
         ivSwitchTwop.setSelected(true);
-        setImageViewLayoutParams(ivSwitchOnep, 34, 22);
-        setImageViewLayoutParams(ivSwitchTwop, 48, 30);
+        setImageViewLayoutParams(ivSwitchOnep, 40, 28);
+        setImageViewLayoutParams(ivSwitchTwop, 54, 36);
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fl_main_activity, fragment2);
         fragmentTransaction.commit();
