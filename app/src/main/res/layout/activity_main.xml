@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8888FF"
+    android:orientation="vertical"
+    tools:context="com.example.jason.switchonepanimation.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_switch_one_or_two_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="9dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_switch_onep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/onep_select"/>
+
+        <ImageView
+            android:id="@+id/iv_switch_twop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/twop_select"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+</LinearLayout>
